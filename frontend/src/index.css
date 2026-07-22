@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #020617;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 2px;
+}
+
+/* Print Overrides matching Legacy Ticket Sheet Dimensions */
+@media print {
+  .print\:hidden {
+    display: none !important;
+  }
+  body, html {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
