@@ -5,8 +5,8 @@ on:
     branches: ["main"]
 
 env:
-  AZURE_FUNCTIONAPP_NAME: 'rhino-field-ops-backend' # Asegúrate de que este sea el nombre de tu app en Azure
-  NODE_VERSION: '20.x'
+  AZURE_FUNCTIONAPP_NAME: 'rhino-field-ops-backend'
+  NODE_VERSION: '24.x' # 👈 Actualizado a la versión recomendada y soportada por GitHub
 
 jobs:
   build-and-deploy:
