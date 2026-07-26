@@ -22,7 +22,10 @@ const inventoryController = {
         VALUES ($1, $2, $3, $4, $5, $6, $7)
         ON CONFLICT (truck_id) DO UPDATE SET
           toilet_paper = truck_consumables_inventory.toilet_paper + EXCLUDED.toilet_paper,
+          blue_chemical = truck_consumables_inventory.blue_chemical + EXCLUDED.blue_chemical,
           deodorizer_pills = truck_consumables_inventory.deodorizer_pills + EXCLUDED.deodorizer_pills,
+          hand_soap = truck_consumables_inventory.hand_soap + EXCLUDED.hand_soap,
+          paper_towels = truck_consumables_inventory.paper_towels + EXCLUDED.paper_towels,
           trash_bags = truck_consumables_inventory.trash_bags + EXCLUDED.trash_bags,
           last_restocked_at = CURRENT_TIMESTAMP
         RETURNING *;
